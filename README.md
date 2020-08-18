@@ -29,23 +29,6 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 The task is episodic, and in order to solve the environment, the agent must get an average score of +13 
 over 100 consecutive episodes.
 
-## Deep-Q-Network Algoritm
-
-We run several training sessions and we included in `Navigation.ipynb` the best one.  We did that using a `agent` with different parameters and we run the *Deep-Q-Network* procedure `dqn` as follows:
-
-```
-  agent = Agent(state_size=state_size, action_size=action_size, seed=1, fc1_units=fc1_nodes, fc2_units=fc2_nodes)       
-  scores, episodes epsilon_list = dqn(n_episodes = 1800, eps_start = 1)  
-```  
-
-We experience the following parameters:  
-
-* `fc1_units` : Number of nodes for the first fully connected layer.
-* `fc2_units` : Number of second for the first fully connected layer.
-
-The obtained weights for the best training session is sabed into the file `model.pt`.
-
-The _Deep-Q-Network_ procedure `dqn` performs  a double loop. External loop is executed till the number of episodes reached the maximal number or the completion criteria is executed `np.mean(scores_window) >=13`, where `scores_window` is the array of the type `deque` realizing  the shifting window of length `<= 100`. The elements `scores_window[i]` and `epsilon_list[i]` contains the `score` and `epsilon` respectively, achieved by the algorithm on the episode `i`.
 
 ## Agent
 
@@ -68,8 +51,40 @@ as follows:
  * Layer fc2,  number of neurons: _fc1_units_ x _fc2_units_,
  * Layer fc3,  number of neurons: _fc2_units_ x _action_size_,
  
-where _state_size_ = 37, _action_size_ = 8, _fc1_units_ and _fc2_units_
-are the input params.
+where _state_size_ = 37, _action_size_ = 8, _fc1_units_ and _fc2_units_ are the input params.
+
+## Deep-Q-Network Algoritm
+
+We run several training sessions and we included in `Navigation.ipynb` the best one.  We did that using a `agent` with different parameters and we run the *Deep-Q-Network* procedure `dqn` as follows:
+
+```
+  agent = Agent(state_size=state_size, action_size=action_size, seed=1, fc1_units=fc1_nodes, fc2_units=fc2_nodes)       
+  scores, episodes epsilon_list = dqn(n_episodes = 1800, eps_start = 1)  
+```  
+
+We experience the following parameters:  
+
+* `fc1_units` : Number of nodes for the first fully connected layer.
+* `fc2_units` : Number of second for the first fully connected layer.
+
+The obtained weights for the best training session is sabed into the file `model.pt`.
+
+The _Deep-Q-Network_ procedure `dqn` performs  a double loop. External loop is executed till the number of episodes reached the maximal number or the completion criteria is executed `np.mean(scores_window) >=13`, where `scores_window` is the array of the type `deque` realizing  the shifting window of length `<= 100`. The elements `scores_window[i]` and `epsilon_list[i]` contains the `score` and `epsilon` respectively, achieved by the algorithm on the episode `i`.
+
+## Output of training
+This is the output of one of our training sessions that indicates for a given DQN architecture the number of episodes required to 
+```
+DQN architecture of the Agent:
+QNetwork(
+  (fc1): Linear(in_features=37, out_features=50, bias=True)
+  (fc2): Linear(in_features=50, out_features=40, bias=True)
+  (fc3): Linear(in_features=40, out_features=4, bias=True)
+)
+Episode: 450, Avg.Score: 13.03,  Score 15.0, Scores >= 13: 59, Epsilon: 0.07
+ terminating at episode : 450 ave reward reached +13 over 100 episodes
+```
+
+## Output of trainin
 
 # 2. Content of this repository
 
