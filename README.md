@@ -32,5 +32,5 @@ Follow the instructions in `Navigation.ipynb` to get started with training your 
 *  `model.pt`:file with the saved model weights of the successful agent.
 
 # Report
-To know more details of this project you can visit this [Report](/Report.md)
+To know more details of this project you can visit this [Report](/report.md)
 
