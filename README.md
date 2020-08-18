@@ -29,9 +29,9 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 The task is episodic, and in order to solve the environment, the agent must get an average score of +13 
 over 100 consecutive episodes.
 
-### Training sessions
+## Deep-Q-Network Algoritm
 
-We run several training sessions and we included in `Navigation.ipynb` the best one.  We did that using a **agent** with different parameters and we run the *Deep-Q-Network* procedure **dqn** as follows:
+We run several training sessions and we included in `Navigation.ipynb` the best one.  We did that using a `agent` with different parameters and we run the *Deep-Q-Network* procedure `dqn` as follows:
 
 ```
   agent = Agent(state_size=state_size, action_size=action_size, seed=1, fc1_units=fc1_nodes, fc2_units=fc2_nodes)       
@@ -45,12 +45,38 @@ We experience the following parameters:
 
 The obtained weights for the best training session is sabed into the file `model.pt`.
 
+The _Deep-Q-Network_ procedure `dqn` performs  a double loop. External loop is executed till the number of episodes reached the maximal number or the completion criteria is executed `np.mean(scores_window) >=13`, where `scores_window` is the array of the type `deque` realizing  the shifting window of length `<= 100`. The elements `scores_window[i]` and `epsilon_list[i]` contains the `score` and `epsilon` respectively, achieved by the algorithm on the episode `i`.
+
+## Agent
+
+The class `Agent`is the well-known class implementing the following mechanisms:
+
+* Two Q-Networks (local and target) using the a neural network.
+* Replay memory (using the class ReplayBuffer)
+* Epsilon-greedy mechanism
+* Q-learning, i.e., using the max value for all possible actions
+* Computing the loss function by MSE loss
+* Minimize the loss by gradient descend mechanism using the ADAM optimizer
+* Soft update from local QNetwork parameters to target QNetwork parameters
+
+## Model Q-Network
+
+Both Q-Networks (local and target) are implemented by the class `QNetwork`, a simple neural network with 3 fully-connected layers and 2 rectified nonlinear layers. This `QNetwork` class is implemented in the framework of Python package `PyTorch`. The number of neurons of the fully-connected layers are 
+as follows:
+
+ * Layer fc1,  number of neurons: _state_size_ x _fc1_units_, 
+ * Layer fc2,  number of neurons: _fc1_units_ x _fc2_units_,
+ * Layer fc3,  number of neurons: _fc2_units_ x _action_size_,
+ 
+where _state_size_ = 37, _action_size_ = 8, _fc1_units_ and _fc2_units_
+are the input params.
+
 # 2. Content of this repository
 
 *  `Navigation.ipynb`: file with fully functional code (all code cells are executed and displaying output).
 *  `Report.pdf`: project report.
 *   `model.pt`:file with the saved model weights of the successful agent.
 
-## 3. Report
+# 3. Report
 To know more details of this project you can download this [Report](/Report.md)
 
