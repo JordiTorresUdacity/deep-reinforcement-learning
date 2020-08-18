@@ -84,6 +84,8 @@ Episode: 450, Avg.Score: 13.03,  Score 15.0, Scores >= 13: 59, Epsilon: 0.07
  terminating at episode : 450 ave reward reached +13 over 100 episodes
 ```
 We can plot the evolution of the `score` and `epsilon` during training:
+
+
 ![](score.png)
 ![](epsilon.png)
 
