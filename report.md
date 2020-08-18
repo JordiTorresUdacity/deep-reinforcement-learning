@@ -77,11 +77,17 @@ UPDATE_EVERY = 4        # how often to update the network
 
 eps_start=.99
 eps_end=0.01
-eps_decay = .994)
+eps_decay = .994
 ```
 
-# 2. Content of this repository
+# 2. ideas for Future Work
 
-*  `Navigation.ipynb`: file with fully functional code (all code cells are executed and displaying output).
-*  `Report.pdf`: project report.
-*   `model.pt`:file with the saved model weights of the successful agent.
+1. Hyperparameter tuning
+2. Change the network architecture
+3. Implement the ideas from [Dueling DQN](https://arxiv.org/abs/1511.06581)
+4. Implement the ideas from [Double DQN](https://arxiv.org/abs/1509.06461)
+5. Switch the Uniform Replay Buffer to [Prioritized Experience Replay](https://arxiv.org/abs/1511.05952)
+6. Implement the ideas from [Asynchronous Methods for Deep Reinforcement Learning](https://arxiv.org/abs/1602.01783)
+7. Implement the ideas from [A Distributional Perspective on Reinforcement Learning](https://arxiv.org/abs/1707.06887)
+8. Implement the ideas from [Noisy Networks for Exploration](https://arxiv.org/abs/1706.10295)
+9. Combine the implementations from 5 to 8 to implement [Rainbow: Combining Improvements in Deep Reinforcement Learning](https://arxiv.org/abs/1710.02298)
