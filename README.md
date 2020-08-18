@@ -1,10 +1,9 @@
-# deep-reinforcement-learning
-# udacity-deeprl-navigation
+# Udacity deep-reinforcement-learning Navigation project
 Navigation problem using Deep Reinforcement Learning Agent
 
 # Project Details
 
-![](/images/unity-wide.png)
+![](https://video.udacity-data.com/topher/2018/June/5b1ab4b0_banana/banana.gif)
 ## Unity ML-Agents
 **Unity Machine Learning Agents (ML-Agents)** is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents.
 
