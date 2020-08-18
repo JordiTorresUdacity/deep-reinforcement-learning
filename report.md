@@ -80,7 +80,7 @@ eps_end=0.01
 eps_decay = .994
 ```
 
-# 2. ideas for Future Work
+## ideas for Future Work
 
 1. Hyperparameter tuning
 2. Change the network architecture
