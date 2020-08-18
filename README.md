@@ -72,7 +72,7 @@ The obtained weights for the best training session is sabed into the file `model
 The _Deep-Q-Network_ procedure `dqn` performs  a double loop. External loop is executed till the number of episodes reached the maximal number or the completion criteria is executed `np.mean(scores_window) >=13`, where `scores_window` is the array of the type `deque` realizing  the shifting window of length `<= 100`. The elements `scores_window[i]` and `epsilon_list[i]` contains the `score` and `epsilon` respectively, achieved by the algorithm on the episode `i`.
 
 ## Output of training
-This is the output of one of our training sessions that indicates for a given DQN architecture the number of episodes required to 
+This is the output of one of our training sessions that indicates, for a given DQN architecture (printed), the number of episodes required to train the model:
 ```
 DQN architecture of the Agent:
 QNetwork(
@@ -83,8 +83,10 @@ QNetwork(
 Episode: 450, Avg.Score: 13.03,  Score 15.0, Scores >= 13: 59, Epsilon: 0.07
  terminating at episode : 450 ave reward reached +13 over 100 episodes
 ```
+We can plot the evolution of the `score` and `epsilon` during training:
+ ![score.png][score] 
+ ![epsilon.png][epsilon] 
 
-## Output of trainin
 
 # 2. Content of this repository
 
