@@ -5,14 +5,12 @@ Navigation problem using Deep Reinforcement Learning Agent
 
 ![](https://video.udacity-data.com/topher/2018/June/5b1ab4b0_banana/banana.gif)
 ## Unity ML-Agents
-**Unity Machine Learning Agents (ML-Agents)** is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents.
+**Unity Machine Learning Agents (ML-Agents)** is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents. For game developers, these trained agents can be used for multiple purposes, including controlling [NPC](https://en.wikipedia.org/wiki/Non-player_character) behavior (in a variety of settings such as multi-agent and adversarial), automated testing of game builds and evaluating different game design decisions pre-release. In this project I use Unity's rich environments to design, train, and evaluate a deep reinforcement learning algorithms. 
 
-For game developers, these trained agents can be used for multiple purposes, including controlling [NPC](https://en.wikipedia.org/wiki/Non-player_character) behavior (in a variety of settings such as multi-agent and adversarial), automated testing of game builds and evaluating different game design decisions pre-release.
-
-In this course, you will use Unity's rich environments to design, train, and evaluate your own deep reinforcement learning algorithms. You can read more about ML-Agents by perusing the [GitHub repository](https://github.com/Unity-Technologies/ml-agents).
+You can learn more about ML-Agents by perusing the [GitHub repository](https://github.com/Unity-Technologies/ml-agents).
 
 ## The Environment
-For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.
+For this project, I will train an agent to navigate (and collect bananas!) in a large, square world.
 
 <p align="center">
   <img src="/images/banana.gif" />
@@ -29,38 +27,14 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 
-# Getting Started
+# Content of this repository
 
-## Dependencies
+The `Navigation.ipynb file with fully functional code, all code cells executed and displaying output, and all questions answered. You can also download this via your workspace by clicking download as..
+A README.md markdown file with a description of your code, much like this one.
+An HTML or PDF export of the project report with the name Report.html or Report.pdf.
+A file with the saved model weights of the successful agent, can be named something like model.pt.
+Any additional images used for the project that were not supplied to you for the project. Please do not include the large banana, project data sets that you may download to work with. These files will make your project too large to submit.
 
-To set up your python environment to run the code in this repository, follow the instructions below.
-
-1. Create (and activate) a new environment with Python 3.6.
-
-	- __Windows__:
-	```bash
-	conda create --name drlnd python=3.6 
-	activate drlnd
-	```
-	- __Linux__ or __Mac__:
-	```bash
-	conda create --name drlnd python=3.6 
-	source activate drlnd
-	```
-	
-2. Install pytorch >= 1.4.0
-
-3. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.  
-	- Next, install the **classic control** environment group by following the instructions [here](https://github.com/openai/gym#classic-control).
-	- Then, install the **box2d** environment group by following the instructions [here](https://github.com/openai/gym#box2d).
-	
-4. Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies.
-```bash
-git clone https://github.com/erichans/udacity-deeprl-navigation.git
-cd udacity-deeprl-navigation/python
-pip install .
-```
-# Instructions
 
 ## Train the Agent
 ```bash
@@ -88,10 +62,5 @@ You can tune the model by changing the following hyperparameters in following fi
 * TAU = 1e-3 (soft update from local QNetwork parameters to target QNetwork parameters)
 
 ## Report
-To see more details like:
-* Learning Algorithm 
-* Plot of Rewards
-* Ideas for Future Work
-
-Check the [Report](/Report.md)
+To see more details in this [Report](/Report.md)
 
