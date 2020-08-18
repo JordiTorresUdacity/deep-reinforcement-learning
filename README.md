@@ -34,14 +34,14 @@ over 100 consecutive episodes.
 We run several training sessions and we included in `Navigation.ipynb` the best one.  We did that using a **agent** with different parameters and we run the *Deep-Q-Network* procedure **dqn** as follows:
 
 ```
-  agent = **Agent**(state_size=state_size, action_size=action_size, seed=1, fc1_units=fc1_nodes, fc2_units=fc2_nodes)       
-  scores, episodes epsilon_list = **dqn**(n_episodes = 1800, eps_start = 1)  
+  agent = Agent(state_size=state_size, action_size=action_size, seed=1, fc1_units=fc1_nodes, fc2_units=fc2_nodes)       
+  scores, episodes epsilon_list = dqn(n_episodes = 1800, eps_start = 1)  
 ```  
 
 We experience the following parameters:  
 
-* _fc1_units_ : Number of nodes for the first fully connected layer.
-* _fc2_units_ : Number of second for the first fully connected layer.
+* `fc1_units` : Number of nodes for the first fully connected layer.
+* `fc2_units` : Number of second for the first fully connected layer.
 
 The obtained weights for the best training session is sabed into the file `model.pt`.
 
