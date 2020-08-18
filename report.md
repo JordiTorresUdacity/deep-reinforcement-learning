@@ -3,7 +3,7 @@ Navigation problem using Deep Reinforcement Learning Agent
 
 # PROJECT REPORT
 
-Below is described detail of the learning algorithm and the main components:
+Below is described the learning algorithm and the main components in my implementation:
 
 ## Agent
 
