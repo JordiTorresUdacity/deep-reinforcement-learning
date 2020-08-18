@@ -8,7 +8,7 @@ Navigation problem using Deep Reinforcement Learning Agent
 
 ### Instructions
 
-Follow the instructions in `Navigation.ipynb` notebook to get started with training your own agent!  
+Read this  [document](/report.md) and follow the instructions in `Navigation.ipynb` notebook to get started with training your own agent!  
 
 
 # Content of this repository
@@ -16,7 +16,4 @@ Follow the instructions in `Navigation.ipynb` notebook to get started with train
 *  `Navigation.ipynb`: file with fully functional code (all code cells are executed and displaying output).
 *  `Report.pdf`: project report.
 *  `model.pt`:file with the saved model weights of the successful agent.
-
-# Report
-To know more details of this project you can visit this [Report](/report.md)
 
